@@ -464,3 +464,29 @@ if __name__ == "__main__":
     # boucle principale pour garder le process vivant
     while True:
         time.sleep(3600)
+
+# ---- keepalive Flask pour Render ----
+from flask import Flask
+import threading, os
+
+app = Flask(__name__)
+
+@app.get("/")
+def health():
+    return "ok", 200
+
+def run_web():
+    port = int(os.environ.get("PORT", "10000"))
+    # threaded=True pour éviter de bloquer le bot
+    app.run(host="0.0.0.0", port=port, threaded=True)
+
+if __name__ == "__main__":
+    # on garde ce qui existe déjà :
+    # th1 = threading.Thread(target=scheduler_loop, daemon=True)
+    # th2 = threading.Thread(target=commands_loop, daemon=True)
+    # th1.start(); th2.start()
+    # boucle principale…
+    web_th = threading.Thread(target=run_web, daemon=True)
+    web_th.start()
+    while True:
+        time.sleep(3600)
