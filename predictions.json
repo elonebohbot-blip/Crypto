@@ -1,0 +1,34 @@
+{
+  "BTC": [
+    {
+      "source": "Blockchain.News (2025-08-14)",
+      "target": 150000,
+      "currency": "USD",
+      "deadline": "2025-09-30",
+      "note": "si cassure 125k$"
+    },
+    {
+      "source": "FinanceMagnates (2025-08-14)",
+      "target": 200000,
+      "currency": "USD",
+      "deadline": "2025-12-31",
+      "note": "scénario fin 2025"
+    }
+  ],
+  "ADA": [
+    {
+      "source": "Analyst Ali via CoinCentral (2025-08-14)",
+      "target": 1.50,
+      "currency": "USD",
+      "deadline": "2025-09-15",
+      "note": "après cassure 0.94$"
+    },
+    {
+      "source": "Blockchain.News (2025-08-14)",
+      "target": 1.18,
+      "currency": "USD",
+      "deadline": "2025-08-31",
+      "note": "projection CT"
+    }
+  ]
+}
